@@ -1,84 +1,102 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+    <meta charset="utf-8">
+    <title>work8 html layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-header{background-image:url(IMG_0446.jpeg);height:256px;}
-nav{background-color:pink;height:400px;flex:1;}
-article{background-color:green;height:400px;flex:4;}
-footer{
-background-color:blue;
-padding:25px;
-text-align:center;
-color:#eee;
-}
-  
-nav{
-background-color:yellow;
-height:400px;
-flex:1;
-}
-article{background-color:blue;height:400px;flex:3;}
-footer{
-background-color:green;
-padding:25px;
-text-align:center;
-color:#eee;
+        .container {
+            width: 1024px;
+            margin: 0 auto;
+        }
 
-}
-section{display:flex;}
-.container{width:1024px;margin:0 auto;}
+        header {
+            background-image: url('IMG_0446.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 256px;
+        }
 
-a:link{
-    color:green;
-    text-decoration:none;
-    background-color:#EBAC38;
-    display:block;
-    width:100%;
-    padding:10px;
-}
-a:visited{
-    color:pink;
+        section {
+            display: flex;
+        }
 
-}
-a:hover{
-    color:red;
-    background-color:#92F58C;
-}
-a:active{
-    color:blue;
+        nav {
+            background-color: yellow;
+            height: 400px;
+            flex: 1;
+        }
 
-}
+        nav ul {
+            list-style-type: none;
+        }
 
-</style>
-<meta charset="utf-8">
-<title>work8 html layout</title>
+        article {
+            background-color: blue;
+            height: 400px;
+            flex: 3;
+        }
+
+        footer {
+            background-color: green;
+            padding: 25px;
+            text-align: center;
+            color: #eee;
+        }
+
+        /* Link Styling */
+        a:link {
+            color: green;
+            text-decoration: none;
+            background-color: #EBAC38;
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+
+        a:visited {
+            color: pink;
+        }
+
+        a:hover {
+            color: red;
+            background-color: #92F58C;
+        }
+
+        a:active {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<header></header>
-<section>
-<nav>
-<ul style="list-style-type:none;"> 
-<li><a href="page1.html">สงครามโลกครั้งที่1</a></li>
-<li><a href="page2.html">สงครามโลกครั้งที่2</a></li>
-<li><a href="page3.html">สงครามเย็น</a></li>
-<li><a href="page4.html">การปฏิวัติอุตสาหกรรม</a></li>
-<li><a href="page5.html">การล่าอาณานิคมของชาวตะวันตก</a></li>
-<li><a href="page6.html">เอเชียตะวันออกเฉียงใต้</a></li>
-</ul>
-</nav>
-<article></article>
-</section>
-<footer>
-<p>จัดทำโดยนางสาววันวิสา พันธุ์ภักดี ชั้น ม.6/6 เลขที่40<br>โรงเรียนรัตนราษฎร์บำรุง</p>
+    <div class="container">
+        <header></header>
+        
+        <section>
+            <nav>
+                <ul> 
+                    <!-- หากต้องการให้เปิดเด้งเป็นแท็บใหม่ ให้เติม target="_blank" เพิ่มเข้าไปในแต่ละแท็ก <a> ได้ครับ -->
+                    <li><a href="page1.html">สงครามโลกครั้งที่1</a></li>
+                    <li><a href="page2.html">สงครามโลกครั้งที่2</a></li>
+                    <li><a href="page3.html">สงครามเย็น</a></li>
+                    <li><a href="page4.html">การปฏิวัติอุตสาหกรรม</a></li>
+                    <li><a href="page5.html">การล่าอาณานิคมของชาวตะวันตก</a></li>
+                    <li><a href="page6.html">เอเชียตะวันออกเฉียงใต้</a></li>
+                </ul>
+            </nav>
+            <article>
+                <!-- ใส่เนื้อหาข่าวสาร/บทความฝั่งขวาตรงนี้ -->
+            </article>
+        </section>
 
-</footer> 
-</div>
+        <footer>
+            <p>จัดทำโดยนางสาววันวิสา พันธุ์ภักดี ชั้น ม.6/6 เลขที่40<br>โรงเรียนรัตนราษฎร์บำรุง</p>
+        </footer> 
+    </div>
 </body>
 </html>
