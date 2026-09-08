@@ -28,7 +28,7 @@
 
         nav {
             background-color: yellow;
-            height: 400px;
+            min-height: 400px;
             flex: 1;
         }
 
@@ -38,8 +38,10 @@
 
         article {
             background-color: blue;
-            height: 400px;
+            min-height: 400px;
             flex: 3;
+            padding: 20px;
+            color: white;
         }
 
         footer {
@@ -49,27 +51,41 @@
             color: #eee;
         }
 
-        /* Link Styling */
-        a:link {
+        /* ปุ่มเมนู */
+        nav button {
             color: green;
             text-decoration: none;
             background-color: #EBAC38;
             display: block;
             width: 100%;
             padding: 10px;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
         }
 
-        a:visited {
-            color: pink;
-        }
-
-        a:hover {
+        nav button:hover {
             color: red;
             background-color: #92F58C;
         }
 
-        a:active {
-            color: blue;
+        /* สไตล์สำหรับซ่อน/แสดงเนื้อหา */
+        .page-content {
+            display: none; /* ซ่อนทุกหน้าไว้ก่อน */
+        }
+
+        .page-content.active {
+            display: block; /* แสดงเฉพาะหน้าที่ถูกเลือก */
+        }
+
+        .page-content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5%;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -80,17 +96,52 @@
         <section>
             <nav>
                 <ul> 
-                    <!-- หากต้องการให้เปิดเด้งเป็นแท็บใหม่ ให้เติม target="_blank" เพิ่มเข้าไปในแต่ละแท็ก <a> ได้ครับ -->
-                    <li><a href="page1.html"target="_blank">สงครามโลกครั้งที่1</a></li>
-                    <li><a href="page2.html"target="_blank">สงครามโลกครั้งที่2</a></li>
-                    <li><a href="page3.html"target="_blank">สงครามเย็น</a></li>
-                    <li><a href="page4.html"target="_blank">การปฏิวัติอุตสาหกรรม</a></li>
-                    <li><a href="page5.html"target="_blank">การล่าอาณานิคมของชาวตะวันตก</a></li>
-                    <li><a href="page6.html"target="_blank">เอเชียตะวันออกเฉียงใต้</a></li>
+                    <li><button onclick="showPage('page1')">สงครามโลกครั้งที่ 1</button></li>
+                    <li><button onclick="showPage('page2')">สงครามโลกครั้งที่ 2</button></li>
+                    <li><button onclick="showPage('page3')">สงครามเย็น</button></li>
+                    <li><button onclick="showPage('page4')">การปฏิวัติอุตสาหกรรม</button></li>
+                    <li><button onclick="showPage('page5')">การล่าอาณานิคมของชาวตะวันตก</button></li>
+                    <li><button onclick="showPage('page6')">เอเชียตะวันออกเฉียงใต้</button></li>
                 </ul>
             </nav>
+
             <article>
-                <!-- ใส่เนื้อหาข่าวสาร/บทความฝั่งขวาตรงนี้ -->
+                <!-- เนื้อหาหน้า 1 -->
+                <div id="page1" class="page-content active">
+                    <h2>สงครามโลกครั้งที่ 1</h2><br>
+                    <img src="IMG_0447.jpeg">
+                    <p>สงครามโลกครั้งที่ 1 (World War I หรือ WWI) เป็นมหาความขัดแย้งระดับโลกที่เปลี่ยนโฉมหน้าประวัติศาสตร์มนุษยชาติไปตลอดกาล โดยการสู้รบเกิดขึ้นระหว่างวันที่ 28 กรกฎาคม พ.ศ. 2457 ถึง 11 พฤศจิกายน พ.ศ. 2461 เป็นเวลานานกว่า 4 ปี 3 เดือน มีผู้เสียชีวิตทั้งทหารและพลเรือนรวมกันมากกว่า 20 ล้านคน</p>
+                </div>
+
+                <!-- เนื้อหาหน้า 2 -->
+                <div id="page2" class="page-content">
+                    <h2>สงครามโลกครั้งที่ 2</h2><br>
+                    <p>เนื้อหาของสงครามโลกครั้งที่ 2 ใส่ตรงนี้...</p>
+                </div>
+
+                <!-- เนื้อหาหน้า 3 -->
+                <div id="page3" class="page-content">
+                    <h2>สงครามเย็น</h2><br>
+                    <p>เนื้อหาของสงครามเย็น ใส่ตรงนี้...</p>
+                </div>
+
+                <!-- เนื้อหาหน้า 4 -->
+                <div id="page4" class="page-content">
+                    <h2>การปฏิวัติอุตสาหกรรม</h2><br>
+                    <p>เนื้อหาการปฏิวัติอุตสาหกรรม ใส่ตรงนี้...</p>
+                </div>
+
+                <!-- เนื้อหาหน้า 5 -->
+                <div id="page5" class="page-content">
+                    <h2>การล่าอาณานิคมของชาวตะวันตก</h2><br>
+                    <p>เนื้อหาการล่าอาณานิคม ใส่ตรงนี้...</p>
+                </div>
+
+                <!-- เนื้อหาหน้า 6 -->
+                <div id="page6" class="page-content">
+                    <h2>เอเชียตะวันออกเฉียงใต้</h2><br>
+                    <p>เนื้อหาเอเชียตะวันออกเฉียงใต้ ใส่ตรงนี้...</p>
+                </div>
             </article>
         </section>
 
@@ -98,5 +149,19 @@
             <p>จัดทำโดยนางสาววันวิสา พันธุ์ภักดี ชั้น ม.6/6 เลขที่40<br>โรงเรียนรัตนราษฎร์บำรุง</p>
         </footer> 
     </div>
+
+    <!-- โค้ด JavaScript สำหรับสลับหน้า -->
+    <script>
+        function showPage(pageId) {
+            // ซ่อนเนื้อหาทุกหน้า
+            var contents = document.querySelectorAll('.page-content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // แสดงเฉพาะหน้าที่กด
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
